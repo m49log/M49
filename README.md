@@ -17,7 +17,7 @@ npm install pm2@latest -g
 
 **Install M49:**
 
-git clone https://github.com/stefanin/m49.git
+git clone https://github.com/m49log/M49.git
 
 cd m49
 
@@ -71,10 +71,4 @@ pm2 start bin/M49server.py --name M49server.py --interpreter python3.8 --restart
 
 
 **Release :**
-0.5.4 build 20.6.25 add feature CPU temperature
-
-0.5.2 build 20.6.24 syslogdel-add.py new script for insert message in syslogdel - M49server.py clear syslog collection from syslogdel collection  
-                    
-0.5.2 build 20.6.23 add syslog view
-
-0.5.1 build 20.6.17 add syslogserver
+0.3.12 First stable release
