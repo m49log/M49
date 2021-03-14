@@ -1,4 +1,4 @@
-const M49ServerRelease ="0.5.2 build 20.7.5"
+const M49ServerRelease ="0.3.12"
 const express=require('express');
 const expressip = require('express-ip');
 const path=require('path');
