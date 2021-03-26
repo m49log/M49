@@ -69,6 +69,9 @@ docker exec m49log /bin/bash /M49/m49Start.sh
 **HTTPS certificate:**
 
 **M49Client:**
+
+M49Client ipserver
+
    Windows:
 
     Install the pyinstaller:
@@ -104,3 +107,5 @@ docker exec m49log /bin/bash /M49/m49Start.sh
 
 **Release :**
 0.3.12 First stable release
+
+1.3.25 M49Client SERVERIP external configuration parameter 
