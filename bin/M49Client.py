@@ -1,8 +1,5 @@
-RELEASE="M49Client 0.5.4 build 20.6.24"
-SERVERIP="192.168.1.3"
-SERVER_URL = "https://"+SERVERIP
-INFO = "/info"
-DEVICESLOG="/deviceslog-add"
+RELEASE="M49Client 1.3.25"
+    
 import requests
 import socket
 import getpass
@@ -14,6 +11,15 @@ import wmi
 import logging
 import logging.handlers
 import datetime
+try:
+    SERVERIP=sys.argv[1]
+    SERVER_URL = "https://"+SERVERIP
+    INFO = "/info"
+    DEVICESLOG="/deviceslog-add"
+
+except:
+    print("M49Client ipserver")
+    exit
 urllib3.disable_warnings()
 NewTestTime=900
 ncliclo = 0
@@ -26,7 +32,7 @@ proxies = {
 # configure SysLog
 M49logger = logging.getLogger('M49Logger')
 M49logger.setLevel(logging.INFO)
-handler = logging.handlers.SysLogHandler(address = ('192.168.1.3',514))
+handler = logging.handlers.SysLogHandler(address = (SERVERIP,514))
 M49logger.addHandler(handler)
 
 
@@ -57,7 +63,7 @@ def getSystem():
     	command = "ioreg -l | grep IOPlatformSerialNumber"
     return os.popen(command).read().replace("\n","").replace("                   ","").replace("Caption","")
 
-def dirtree(dir='.'):
+def dirtree(dir='C:\\environment\\marker'):
     '''
         it list the tree files, starting the dir position
     '''
