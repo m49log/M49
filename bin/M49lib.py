@@ -1,9 +1,10 @@
 import pymongo
 import time
 import datetime
+import socket
 
 RELEASE="M49server 0.3.12"
-M49Servername='server3'
+M49Servername=socket.gethostname()#stefanin: get server hostname
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client.M49
 DATEserver=datetime.datetime.now()
