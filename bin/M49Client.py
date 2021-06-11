@@ -63,7 +63,7 @@ def getSystem():
     	command = "ioreg -l | grep IOPlatformSerialNumber"
     return os.popen(command).read().replace("\n","").replace("                   ","").replace("Caption","")
 
-def dirtree(dir='C:\\environment\\marker'):
+def dirtree(dir='.'):
     '''
         it list the tree files, starting the dir position
     '''
